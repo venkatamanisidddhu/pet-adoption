@@ -1,0 +1,249 @@
+.about-hero {
+    margin-top: 64px;
+    padding: 6rem 0;
+    background-color: white;
+    color: black;
+    text-align: center;
+}
+
+.about-hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-hero h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+}
+
+.about-hero p {
+    font-size: 1.25rem;
+    opacity: 0.9;
+    color: gray;
+}
+
+.our-story {
+    padding: 6rem 0;
+    background-color: #ffffff;
+}
+
+.story-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.story-image {
+    flex: 1 1 400px;
+}
+
+.story-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+.story-content {
+    flex: 1 1 400px;
+}
+
+.story-content h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #1f2937;
+}
+
+.story-content p {
+    color: #6b7280;
+    margin-bottom: 1rem;
+    font-size: 1.125rem;
+}
+
+.team-section {
+    padding: 6rem 0;
+    background-color: #f9fafb;
+}
+
+.team-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+}
+
+.team-grid {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.team-member {
+    background: #ffffff;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    width: 300px;
+    flex: 0 1 300px;
+}
+
+.team-member:hover {
+    transform: translateY(-4px);
+}
+
+.team-member img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.team-member h3 {
+    color: #e35652;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 1.5rem 1.5rem 0.5rem;
+}
+
+.team-member .role {
+    color: #a95d5d;
+    font-weight: 500;
+    margin: 0 1.5rem 0.5rem;
+}
+
+.team-member .bio {
+    color: #6b7280;
+    margin: 0 1.5rem 1.5rem;
+    font-size: 0.875rem;
+}
+
+.impact-section {
+    padding: 6rem 0;
+    background-color: #ffffff;
+}
+
+.impact-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+}
+
+.impact-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    text-align: center;
+}
+
+.impact-stat {
+    width: 200px;
+    flex: 0 1 200px;
+}
+
+.impact-stat .stat-number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #e35652;
+    margin-bottom: 0.5rem;
+}
+
+.impact-stat .stat-label {
+    color: #6b7280;
+    font-weight: 500;
+}
+
+.contact-section {
+    padding: 6rem 0;
+    background-color: #f9fafb;
+}
+
+.contact-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+    justify-content: center;
+}
+
+.contact-info {
+    flex: 1 1 400px;
+}
+
+.contact-info h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.contact-info p {
+    color: #6b7280;
+    margin-bottom: 2rem;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: #1f2937;
+}
+
+.contact-form {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1 1 400px;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #1f2937;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.375rem;
+    transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #e35652;
+}
+
+@media (max-width: 768px) {
+    .about-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .story-grid,
+    .contact-grid {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .team-grid{
+        display: flex;
+        flex-direction: column;
+    }
+}
