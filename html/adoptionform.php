@@ -1,4 +1,6 @@
 <?php
+session_start();
+include('connection.php');
 $petId = $_GET['id'];
 $petNames = [
     1 => "Luna",
@@ -16,27 +18,31 @@ $petNames = [
     13 => "Sky"
 ];
 
-
-
 $petName = $petNames[$petId];
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $applicantName = $_POST["name"];
-    $applicantEmail = $_POST["email"];
-    $applicantPhone = $_POST["number"];
-    $applicantAddress = $_POST["address"];
+    $name = $_POST["name"];
+    $email = $_POST["email"];
+    $number = $_POST["number"];
+    $address = $_POST["address"];
     $housingType = $_POST["housingType"];
     $experience = $_POST["experience"];
+    
+    if(isset($_POST["adoptionForm"])){
+            $data = "INSERT INTO adoptiondetails VALUES ('$name', '$email', '$number',
+            '$address', '$housingType', '$experience', '$petName')";
+            mysqli_query($conn, $data);
+    }
 
     echo "<h2>Application Received!</h2>";
-    echo "<p>Thank you, <strong>$applicantName</strong>, for applying to adopt <strong>$petName</strong>.</p>";
-    echo "<p>We will contact you soon at <strong>$applicantEmail</strong>.</p>";
+    echo "<p>Thank you, <strong>$name</strong>, for applying to adopt <strong>$petName</strong>.</p>";
+    echo "<p>We will contact you soon at <strong>$email</strong>.</p>";
     echo "<p>You will be redirected to the <a href='index.php'>homepage</a> in a few seconds...</p>";
 
     echo "<script>
         setTimeout(function() {
             window.location.href = 'index.php';
-        }, 5000);
+        }, 10000);
     </script>";
 
     exit;
@@ -74,20 +80,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <h2>Adoption Application</h2>
             <form id="adoptionForm" method="post">
                 <div class="form-group">
-                    <label for="applicantName" >Full Name</label>
-                    <input type="text" name="name" id="applicantName" required>
+                    <label for="name" >Full Name</label>
+                    <input type="text" name="name" id="name" required>
                 </div>
                 <div class="form-group">
-                    <label for="applicantEmail">Email</label>
-                    <input type="email"name="email" id="applicantEmail" required>
+                    <label for="email">Email</label>
+                    <input type="email"name="email" id="email" required>
                 </div>
                 <div class="form-group">
-                    <label for="applicantPhone">Phone</label>
-                    <input type="tel" name="number" id="applicantPhone" required>
+                    <label for="number">Phone</label>
+                    <input type="tel" name="number" id="phone" required>
                 </div>
                 <div class="form-group">
-                    <label for="applicantAddress">Address</label>
-                    <textarea id="applicantAddress" name="address" required></textarea>
+                    <label for="Address">Address</label>
+                    <textarea id="Address" name="address" required></textarea>
                 </div>
                 <div class="form-group">
                     <label for="housingType">Housing Type</label>
@@ -102,7 +108,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <label for="experience">Pet Care Experience</label>
                     <textarea  name="experience" id="experience" required></textarea>
                 </div>
-                <button type="submit" class="primary-btn">Submit Application</button>
+                <button type="submit" name="adoptionForm"  class="primary-btn">Submit Application</button>
             </form>
         </div>
     </div>

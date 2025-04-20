@@ -1,5 +1,24 @@
 <?php
 session_start();
+include('connection.php');
+if ($_SERVER["REQUEST_METHOD"] == "POST"){
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $message = $_POST['message'];
+
+    if(isset($_POST['sendmessage'])){
+    $data = "INSERT INTO contact_messages (name, email, message) VALUES ('$name', '$email', '$message')";
+    $re = mysqli_query($conn, $data);
+    if($re){
+        echo "<script>
+        alert('Thank For Your response. We Will contact you soon!')
+        </script>";
+        header("Location:index.php");
+        exit;
+    }
+}
+
+}
 
 ?>
 
@@ -133,20 +152,20 @@ session_start();
                     </div>
                 </div>
                 <div class="contact-form">
-                    <form id="contactForm">
+                    <form id="contactForm" method="post">
                         <div class="form-group">
                             <label for="name">Name</label>
-                            <input type="text" id="name" required>
+                            <input type="text" name="name" id="name" required>
                         </div>
                         <div class="form-group">
                             <label for="email">Email</label>
-                            <input type="email" id="email" required>
+                            <input type="email" name="email" id="email" required>
                         </div>
                         <div class="form-group">
                             <label for="message">Message</label>
-                            <textarea id="message" rows="5" required></textarea>
+                            <textarea id="message" name="message" rows="5" required></textarea>
                         </div>
-                        <button type="submit" class="primary-btn">Send Message</button>
+                        <button type="submit" name="sendmessage" class="primary-btn">Send Message</button>
                     </form>
                 </div>
             </div>

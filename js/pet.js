@@ -193,33 +193,48 @@ const petId = urlParams.get('id');
 function loadPetDetails() {
     const pet = petData[petId];
 
-    document.title = `${pet.name}`;
-
+    document.title = pet.name;
     document.getElementById('petName').textContent = pet.name;
     document.getElementById('petType').textContent = pet.type;
     document.getElementById('petAge').textContent = pet.age;
     document.getElementById('petGender').textContent = pet.gender;
     document.getElementById('petDescription').textContent = pet.description;
 
-    const mainImage = document.getElementById('mainImage')
-    const thumbnailGrid = document.getElementById('thumbnailGrid')
+    const mainImage = document.getElementById('mainImage');
+    mainImage.src = pet.images[0];
+    mainImage.alt = pet.name;
 
-    mainImage.src = pet.images[0]
-    mainImage.alt = pet.name
+    const thumbnailGrid = document.getElementById('thumbnailGrid');
+    thumbnailGrid.innerHTML = '';
+    const thumb = document.createElement('div');
+    thumb.className = 'thumbnail active';
 
-    thumbnailGrid.innerHTML = `
-    <div class="thumbnail active" data-index="0">
-        <img src="${pet.images[0]}" alt="${pet.name}">
-    </div>`
+    const thumbImg = document.createElement('img');
+    thumbImg.src = pet.images[0];
+    thumbImg.alt = pet.name;
+    thumb.appendChild(thumbImg);
+    thumbnailGrid.appendChild(thumb);
 
     const characteristicsGrid = document.getElementById('characteristics');
-    characteristicsGrid.innerHTML = pet.characteristics.map(char => `
-        <div class="characteristic">
-            <div class="characteristic-icon">${char.icon}</div>
-            <div class="characteristic-label">${char.label}</div>
-        </div>
-    `).join('')
+    characteristicsGrid.innerHTML = '';
+    pet.characteristics.forEach(char => {
+        const item = document.createElement('div');
+        item.className = 'characteristic';
+
+        const icon = document.createElement('div');
+        icon.className = 'characteristic-icon';
+        icon.textContent = char.icon;
+
+        const label = document.createElement('div');
+        label.className = 'characteristic-label';
+        label.textContent = char.label;
+
+        item.appendChild(icon);
+        item.appendChild(label);
+        characteristicsGrid.appendChild(item);
+    });
 }
+
 
 
 document.addEventListener('DOMContentLoaded', () => {

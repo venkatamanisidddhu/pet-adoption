@@ -137,30 +137,16 @@ let filteredPets = [...pets];
 
 const petsContainer = document.querySelector('.pets-container');
 const animalTypeSelect = document.getElementById('animal-type');
-const breedSelect = document.getElementById('breed');
-const ageSelect = document.getElementById('age-range');
 const genderSelect = document.getElementById('gender');
 const applyFiltersBtn = document.querySelector('.apply-filters-btn');
 
 
-const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-const navLinks = document.querySelector('.nav-links');
-
-mobileMenuBtn.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-});
-
-
 function applyFilters() {
     const animalType = animalTypeSelect.value;
-    const breed = breedSelect.value;
-    const age = ageSelect.value;
     const gender = genderSelect.value;
 
     filteredPets = pets.filter(pet => {
         const typeMatch = animalType === 'all' || pet.type === animalType;
-        const breedMatch = breed === 'all' || pet.breed === breed;
-        const ageMatch = age === 'all' || pet.age.includes(age);
         const genderMatch = gender === 'all' || pet.gender === gender;
 
         return typeMatch && breedMatch && ageMatch && genderMatch;
@@ -168,61 +154,35 @@ function applyFilters() {
 
     renderPets();
 }
-animalTypeSelect.addEventListener('change', () => {
-    const selectedType = animalTypeSelect.value;
-    const breeds = [...new Set(pets
-        .filter(pet => selectedType === 'all' || pet.type === selectedType)
-        .map(pet => pet.breed))];
 
-    breedSelect.innerHTML = '<option value="all">All Breeds</option>' +
-        breeds.map(breed => `<option value="${breed}">${breed}</option>`).join('');
-});
-
-applyFiltersBtn.addEventListener('click', applyFilters);
+applyFiltersBtn.addEventListener('click', applyFilters)
 
 function renderPets() {
-    petsContainer.innerHTML = filteredPets.map(pet => `
-        <div class="pet-card">
+    petsContainer.innerHTML = ''
+    filteredPets.forEach(pet => {
+        const card = document.createElement('div')
+        card.className = 'pet-card'
+        card.innerHTML = `
             <div class="pet-image-container">
                 <img src="${pet.image}" alt="${pet.name}" class="pet-image">
             </div>
             <div class="pet-info">
                 <h3 class="pet-name">${pet.name}</h3>
                 <div class="pet-details">
-                    <div class="pet-detail">
-                        <strong>Breed:</strong> ${pet.breed}
-                    </div>
-                    <div class="pet-detail">
-                        <strong>Age:</strong> ${pet.age}
-                    </div>
-                    <div class="pet-detail">
-                        <strong>Gender:</strong> ${pet.gender}
-                    </div>
+                    <div class="pet-detail"><strong>Breed:</strong> ${pet.breed}</div>
+                    <div class="pet-detail"><strong>Age:</strong> ${pet.age}</div>
+                    <div class="pet-detail"><strong>Gender:</strong> ${pet.gender}</div>
                 </div>
                 <p class="pet-description">${pet.description}</p>
-                <button class="primary-btn meet-btn" onclick="viewPet(${pet.id})">Meet ${pet.name}</button>
+                <button class="primary-btn meet-btn">Meet ${pet.name}</button>
             </div>
-        </div>
-    `).join('');
+        `
+        card.querySelector('button').onclick = () => viewPet(pet.id)
+        petsContainer.appendChild(card);
+    });
 }
+
 
 function viewPet(petId) {
-    window.location.href = `/html/pet.php?id=${petId}`;
+    window.location.href = `/html/pet.php?id=${petId}`
 }
-document.addEventListener('DOMContentLoaded', () => {
-    const urlParams = new URLSearchParams(window.location.search);
-    const petType = urlParams.get('petType') || 'all';
-    const location = urlParams.get('location') || '';
-    const age = urlParams.get('age') || 'all';
-
-    animalTypeSelect.value = petType;
-    ageSelect.value = age;
-
-    animalTypeSelect.dispatchEvent(new Event('change'));
-
-    if (petType !== 'all' || age !== 'all' || location) {
-        applyFilters();
-    } else {
-        renderPets();
-    }
-});
