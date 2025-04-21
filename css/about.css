@@ -30,14 +30,13 @@
 
 .story-grid {
     display: flex;
-    flex-wrap: wrap;
     gap: 4rem;
     align-items: center;
     justify-content: center;
 }
 
 .story-image {
-    flex: 1 1 400px;
+    flex: 1 1 400px;        
 }
 
 .story-image img {

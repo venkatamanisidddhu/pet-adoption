@@ -293,7 +293,7 @@ body {
 }
 
 .stat-label {
-    color: var(--text-light);
+    color: gray;
     font-weight: 500;
 }
 
@@ -376,7 +376,7 @@ body {
 }
 
 .newsletter-form button:hover {
-    background-color: var(--primary-hover);
+    background-color: #f32119;
 }
 
 .footer-bottom {

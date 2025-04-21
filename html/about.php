@@ -83,20 +83,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
             <h2>Meet Our Team</h2>
             <div class="team-grid">
                 <div class="team-member">
-                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=2070" alt="Sarah Johnson">
-                    <h3>Sarah Johnson</h3>
+                    <img src="../imgs/t-3.jpeg" alt="Tony stark">
+                    <h3>Tony stark</h3>
                     <p class="role">Founder & CEO</p>
                     <p class="bio">With over 15 years of experience in animal welfare, Sarah leads our mission to connect pets with loving homes.</p>
                 </div>
                 <div class="team-member">
-                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=2070" alt="Mike Thompson">
-                    <h3>Mike Thompson</h3>
+                    <img src="../imgs/t-2.jpeg" alt="Tom Cruise">
+                    <h3>Tom Cruise</h3>
                     <p class="role">Head of Operations</p>
                     <p class="bio">Mike ensures our platform runs smoothly and our partner shelters have everything they need.</p>
                 </div>
                 <div class="team-member">
-                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=2070" alt="Emily Chen">
-                    <h3>Emily Chen</h3>
+                    <img src="../imgs/t-1.jpeg" alt="Leonardo DiCaprio">
+                    <h3>Leonardo DiCaprio</h3>
                     <p class="role">Veterinary Director</p>
                     <p class="bio">Dr. Chen oversees the health and well-being of all our shelter partners' pets.</p>
                 </div>
@@ -138,16 +138,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
                     <p>Have questions about adoption or want to become a partner? We'd love to hear from you!</p>
                     <div class="contact-details">
                         <div class="contact-item">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                            <span>(555) 123-4567</span>
+                        <img src="../imgs/contact.png" alt="contact">
+                        <span>(555) 123-4567</span>
                         </div>
                         <div class="contact-item">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                            <span>contact@petfinder.com</span>
+                        <img src="../imgs/email.png" alt="email">
+                        <span>contact@petfinder.com</span>
                         </div>
                         <div class="contact-item">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                            <span>123 Pet Street, Anytown, ST 12345</span>
+                        <img src="../imgs/location.png" alt="location">
+                        <span>123 Pet Street, Anytown, ST 12345</span>
                         </div>
                     </div>
                 </div>
