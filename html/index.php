@@ -40,7 +40,7 @@ session_start();
                 forever families.</p>
             <div class="hero-buttons">
                 <button id="adopt-now-btn" class="primary-btn">Browse Pets</button>
-                <button class="secondary-btn">Learn More</button>
+                <a target="_blank" href= "https://en.wikipedia.org/wiki/Pet_adoption"><button class="secondary-btn" id="learn-more" target="_blank">Learn More</button></a>
             </div>
         </div>
         <div class="hero-img">

@@ -32,8 +32,6 @@ session_start();
          $passerr = 	"Password must contain at least one uppercase letter.";
      }else if(!preg_match("/[0-9]/", $pass)){
          $passerr = 		"Password must contain at least one number.";
-     } elseif (!preg_match("/[@#$%^&*()_+\-=\[\]{};':\"\\|,.<>\/?!]/", $pass)) {
-         $passerr = 		"Password must include at least one special character.";
      }
 
      if($pass != $confpass){

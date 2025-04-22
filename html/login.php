@@ -26,8 +26,6 @@ if (isset($_POST['login'])) {
         $passerr = 	"Password must contain at least one uppercase letter.";
     }else if(!preg_match("/[0-9]/", $pass)){
         $passerr = 		"Password must contain at least one number.";
-    } elseif (!preg_match("/[@#$%^&*()_+\-=\[\]{};':\"\\|,.<>\/?!]/", $pass)) {
-        $passerr = 		"Password must include at least one special character.";
     }
     
     if (empty($emailerr) && empty($passerr)) {

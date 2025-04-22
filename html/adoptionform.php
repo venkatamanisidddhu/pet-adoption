@@ -101,7 +101,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <option value="">Select housing type</option>
                         <option value="house">House</option>
                         <option value="apartment">Apartment</option>
-                        <option value="condo">Condo</option>
+                        <option value="others">others</option>
                     </select>
                 </div>
                 <div class="form-group">
