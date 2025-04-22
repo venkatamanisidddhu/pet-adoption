@@ -86,8 +86,7 @@ session_start();
                 <a href="about.php">About</a>
             </div>
         </div>
-    </nav>
-
+    </nav>  
     <section class="auth-section">
         <div class="container">
             <div class="auth-container">

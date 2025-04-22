@@ -8,7 +8,7 @@ $database = "petadoption";
 $conn = mysqli_connect($host, $user , $password,  $database);
 
 if ($conn) {
-    // echo "✅ Connected successfully!";  
+    // echo " Connected successfully!";  
 } else {
      mysqli_connect_error(); 
 }

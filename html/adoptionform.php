@@ -42,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo "<script>
         setTimeout(function() {
             window.location.href = 'index.php';
-        }, 10000);
+        }, 7000);
     </script>";
 
     exit;

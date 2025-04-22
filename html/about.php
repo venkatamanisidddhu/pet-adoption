@@ -9,20 +9,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     if(isset($_POST['sendmessage'])){
     $data = "INSERT INTO contact_messages (name, email, message) VALUES ('$name', '$email', '$message')";
     $re = mysqli_query($conn, $data);
-    if($re){
+    
         echo "<script>
         alert('Thank For Your response. We Will contact you soon!')
         </script>";
-        header("Location:index.php");
-        exit;
-    }
 }
 
 }
 
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -214,5 +209,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
         </div>
     </footer>
 </body>
-<script src="../js/about.js"></script>
 </html>

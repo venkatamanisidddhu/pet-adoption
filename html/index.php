@@ -22,8 +22,8 @@ session_start();
             </div>
             <div class="nav-links">
                 <a href="#" class="active">Home</a>
-                <a href="adopt.php">Adopt</a>
-                <a href="about.php">About</a>
+                <a href="../html/adopt.php">Adopt</a>
+                <a href="../html/about.php">About</a>
                 <form action="<?php if(isset($_SESSION['name'])) { echo 'logout.php';}else{echo 'login.php';} ?>">
                 <button class="sign-in-btn"><?php echo isset($_SESSION['name']) ? 'Logout' : 'Login'; ?></button>
                 </form>
@@ -149,9 +149,10 @@ session_start();
                 <div class="footer-links">
                     <h3>Quick Links</h3>
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="about.php">About Us</a></li>
+                        <li><a href="index.php">Home</a></li>
                         <li><a href="adopt.php">Adopt</a></li>
+                        <li><a href="../html/about.php">About Us</a></li>
+                        <li><a href="../html/adopt.php">Adopt</a></li>
                     </ul>
                 </div>
                 <div class="footer-links">
