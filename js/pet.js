@@ -181,7 +181,22 @@ const petData = {
             { icon: "🕊️", label: "Free-Spirited" },
             { icon: "🌟", label: "Charming" }
         ]
+    },
+    14: {
+        name: "Chimtu",
+        type: "Dog",
+        breed: "Desi Dog",
+        age: "1.5 years",
+        gender: "Male",
+        images: ["../imgs/dog-14.jpg"],
+        description: "Chimtu is a friendly and charming Desi dog with a golden-brown coat and expressive eyes. He loves relaxing in cozy corners and watching the world go by. A loyal companion full of personality and warmth.",
+        characteristics: [
+            { icon: "🐾", label: "Loyal" },
+            { icon: "🧠", label: "Smart" },
+            { icon: "😌", label: "Calm & Composed" }
+        ]
     }
+    
 };
 
 

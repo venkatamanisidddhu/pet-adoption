@@ -117,7 +117,18 @@ $pets = [
     "gender"=>"Male",
     "image"=>"../imgs/bird-2.jpg",
     "description"=>"Sky is a sweet lovebird who enjoys flying around freely."
+    ],
+    [
+        "id" => 14,
+        "name" => "Chimtu",
+        "type" => "dog",
+        "breed" => "Desi Dog",
+        "age" => "1.5 years",
+        "gender" => "Male",
+        "image" => "../imgs/dog-14.jpg",
+        "description" => "Chimtu is a friendly and charming Desi dog with expressive eyes."
     ]
+    
 ];
 
 

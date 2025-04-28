@@ -216,7 +216,7 @@ body {
 }
 
 .pet-card:hover {
-    transform: translateY(-4px);
+    transform: translateY(-10px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 .pet-image {
@@ -273,7 +273,6 @@ body {
 
 
 
-*/
 .statistics {
     padding: 4rem 0;
 }
@@ -366,7 +365,6 @@ body {
 
 .newsletter-form button {
     background-color:  #e35652;
-    ;
     color: #ffffff;
     padding: 0.75rem 1.5rem;
     border: none;

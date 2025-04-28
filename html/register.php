@@ -48,8 +48,10 @@ session_start();
             $data = "INSERT INTO usersdata (name, email, password) VALUES ('$name', '$email', '$pass')";
             $re = mysqli_query($conn, $data);
             $_SESSION['name'] = $name;
-            header("Location:login.php");
-            exit();
+            echo "<script>
+            alert('Registered successfully')
+            window.location.href = 'index.php'
+         </script>";
       }
      }
 

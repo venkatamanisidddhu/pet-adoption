@@ -15,7 +15,8 @@ $petNames = [
     10 => "Daisy",
     11 => "Bruno",
     12 => "Kiwi",
-    13 => "Sky"
+    13 => "Sky",
+    14 => "Chimtu"
 ];
 
 $petName = $petNames[$petId];

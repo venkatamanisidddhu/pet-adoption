@@ -77,21 +77,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
         <div class="container">
             <h2>Meet Our Team</h2>
             <div class="team-grid">
-                <div class="team-member">
-                    <img src="../imgs/t-3.jpeg" alt="Tony stark">
-                    <h3>Tony stark</h3>
+            <div class="team-member">
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=2070" alt="Sarah Johnson">
+                    <h3>Sarah Johnson</h3>
                     <p class="role">Founder & CEO</p>
                     <p class="bio">With over 15 years of experience in animal welfare, Sarah leads our mission to connect pets with loving homes.</p>
                 </div>
                 <div class="team-member">
-                    <img src="../imgs/t-2.jpeg" alt="Tom Cruise">
-                    <h3>Tom Cruise</h3>
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=2070" alt="Mike Thompson">
+                    <h3>Mike Thompson</h3>
                     <p class="role">Head of Operations</p>
                     <p class="bio">Mike ensures our platform runs smoothly and our partner shelters have everything they need.</p>
                 </div>
                 <div class="team-member">
-                    <img src="../imgs/t-1.jpeg" alt="Leonardo DiCaprio">
-                    <h3>Leonardo DiCaprio</h3>
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=2070" alt="Emily Chen">
+                    <h3>Emily Chen</h3>
                     <p class="role">Veterinary Director</p>
                     <p class="bio">Dr. Chen oversees the health and well-being of all our shelter partners' pets.</p>
                 </div>

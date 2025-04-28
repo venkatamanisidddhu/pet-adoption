@@ -1,9 +1,8 @@
 <?php
 session_start();
 
+
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +13,6 @@ session_start();
     <link rel="stylesheet" href="../css/pet.css">
 </head>
 <body>
-
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">
@@ -31,7 +29,6 @@ session_start();
             </div>
         </div>
     </nav>
-
     <section class="pet-details-2">
         <div class="container">
             <div class="pet-details-grid">

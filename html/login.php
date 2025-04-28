@@ -36,8 +36,10 @@ if (isset($_POST['login'])) {
             if($checking){
                 $user = mysqli_fetch_assoc($datalogin);
                 $_SESSION['name'] = $user['name'];
-                header("Location:index.php");
-                exit();
+                echo "<script>
+               alert('Login successfully')
+               window.location.href = 'index.php'
+            </script>";
             }else{
                 $loginerr = "Invalid email or password!";
             }
@@ -102,24 +104,6 @@ if (isset($_POST['login'])) {
                         <div class="error"><?php echo $loginerr; ?></div>
                         <input type="submit"  name="login" class="primary-btn" value="Sign In">
                     </form>
-
-                    <!-- <div class="auth-divider">
-                        <div class="divider"></div>
-                        <span>or continue with</span>
-                        <div class="divider"></div>
-                    </div> -->
-
-                    <!-- <div class="social-auth">
-                        <button class="social-btn google-btn">
-                            <img src="../imgs/google.ico" alt="Google">
-                            Sign in with Google
-                        </button>
-                        <button class="social-btn facebook-btn">
-                            <img src="../imgs/facebook.png" alt="Facebook">
-                            Sign in with Facebook
-                        </button>
-                    </div> -->
-
                     <p class="auth-footer">
                         Don't have an account? <a href="register.php">Sign up</a>
                     </p>
